@@ -1,0 +1,29 @@
+#%RAML 1.0
+title: monitor-test-api-v1
+version: 1.0.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/4846e1a5-5e1a-4878-bb36-d0cf312392a7/ 
+protocols:
+  - HTTP
+  - HTTPS
+
+/health:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: {
+              "status" : "ok"
+            }
+/raiseError:
+  get:
+    responses:
+     500:
+        body:
+          application/json:
+            example:
+              {
+                "error" :"msg"
+              }
+        
+    
